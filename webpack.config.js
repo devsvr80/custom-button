@@ -1,7 +1,7 @@
 const webpack = require('webpack');
 const path = require('path');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const { CleanWebpackPlugin }  = require('clean-webpack-plugin');
 
 module.exports = {
     mode: 'production',
@@ -20,9 +20,23 @@ module.exports = {
                 use: {
                     loader: 'babel-loader',
                     options: {
-                        presets: ['@babel/preset-env', 'babel/preset-react']
+                        presets: ['@babel/preset-env', '@babel/preset-react']
                     }
                 }
+            },
+            {
+                test: /\.scss$/,
+                use: [
+                    {
+                        loader: 'style-loader',
+                    },
+                    {
+                        loader: 'css-loader',
+                    },
+                    {
+                        loader: 'sass-loader',
+                    }
+                ]
             }
         ]
     },
@@ -30,6 +44,6 @@ module.exports = {
         minimizer: [new UglifyJsPlugin()]
     },
     plugins: [
-        new CleanWebpackPlugin(['dist'])
+        new CleanWebpackPlugin()
     ]
 }

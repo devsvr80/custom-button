@@ -2,7 +2,7 @@
     "name": "@devsvr80/custom-button",
     "module": "/dist/custom-button",
     "description": "My custom button",
-    "varsion": "1.0.0",
+    "version": "1.0.0",
     "author": {
         "name": "devsvr80",
         "email": "devsvr80@gmail.com"
@@ -27,8 +27,12 @@
         "@storybook/react": "^5.3.19",
         "babel-loader": "^8.1.0",
         "clean-webpack-plugin": "^3.0.0",
+        "css-loader": "^3.5.3",
+        "node-sass": "^4.14.1",
         "react": "^16.13.1",
+        "sass-loader": "^8.0.2",
         "storybook-addon-jsx": "^7.3.0",
+        "style-loader": "^1.2.1",
         "uglifyjs-webpack-plugin": "^2.2.0",
         "webpack": "^4.43.0",
         "webpack-cli": "^3.3.11"
