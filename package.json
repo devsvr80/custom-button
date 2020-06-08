@@ -2,7 +2,7 @@
     "name": "@devsvr80/custom-button",
     "module": "/dist/custom-button",
     "description": "My custom button",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "author": {
         "name": "devsvr80",
         "email": "devsvr80@gmail.com"
